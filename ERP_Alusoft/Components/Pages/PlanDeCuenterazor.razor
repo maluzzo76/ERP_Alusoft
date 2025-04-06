@@ -1,0 +1,145 @@
+﻿@page "/PlanDeCuenta"
+@rendermode InteractiveServer
+
+<PageTitle>Inicio</PageTitle>
+
+<h1>
+	Plan de cuentas <span>
+		<button class="btn btn-info" @onclick="Crear">
+			<i class="bi bi-plus-square"> Nuevo</i>
+		</button>
+	</span>
+</h1>
+<br />
+
+@if (Mostrar)
+{
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<h5>@_Titulo</h5>
+			<div class="row">
+				<div class="input-group mb-3 input-group-sm">
+					<span class="input-group-text">Grupo</span>
+					<input type="text" class="form-control" @bind=plan_Cuentas.Codigo placeholder="Ingrese codigo de grupo ej: 01.01.02.03" />
+				</div>
+				<div class="input-group mb-3 input-group-sm">
+					<span class="input-group-text">Nuemero</span>
+					<input type="text" class="form-control" @bind=plan_Cuentas.Numero placeholder="Ingrese numero de cuenta" />
+				</div>
+				<div class="input-group mb-3 input-group-sm">
+					<span class="input-group-text">Nombre</span>
+					<input type="text" class="form-control" @bind=plan_Cuentas.Nombre placeholder="Ingrese nombre de cuenta" />
+				</div>
+				<div class="input-group mb-3 input-group-sm">
+					<div class="form-check form-switch">
+						<label class="form-check-label" for="flexSwitchCheckChecked">Es Imputable</label>
+						<input type="checkbox" class="form-check-input" @bind=plan_Cuentas.IsImputable />						
+					</div>
+				</div>
+				<div class="input-group mb-3 input-group-sm">
+					<div class="form-check form-switch">
+						<label class="form-check-label" for="flexSwitchCheckChecked">Es de resultado</label>
+						<input type="checkbox" class="form-check-input" @bind=plan_Cuentas.IsResultado />
+					</div>
+				</div>
+				<div class="input-group mb-3 input-group-sm">
+					<button class="btn btn-success" @onclick="() => Save()">
+						<i class="bi bi-floppy"> Guardar</i>
+					</button>
+					<button class="btn btn-dark" @onclick="CerrarModal">
+						<i class="bi bi-x-square"> Cerrar</i>
+					</button>
+				</div>
+			</div>
+			<br />
+		</div>
+	</div>
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Grupo</th>
+			<th>Cuenta</th>
+			<th>Es Resultado</th>
+			<th>Es Imputable</th>			
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in lPlan)
+		{
+			string _bold = "";
+			if (item.IsResultado ?? false)
+			{ _bold = "fw-bold"; }
+
+			<tr class="@_bold">
+				<td><span style="color:white">@item.Codigo</span>@item.Codigo </td>
+				<td><i><span style="color:white">@item.Codigo</span> @item.Numero - @item.Nombre</i> </td>
+				<td>
+					<div class="form-check form-switch">
+						<input type="checkbox" disabled class="form-check-input" checked="@item.IsResultado" />
+					</div>
+				</td>
+				<td>
+					<div class="form-check form-switch">
+						<input type="checkbox" disabled class="form-check-input" checked="@item.IsImputable" />
+					</div>
+				</td>				
+				<td>
+					<i class="bi bi-pencil" @onclick="() => Editar(item)"></i>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+@code {
+	private string _Titulo = "";
+	private bool Mostrar = false;
+	Plan_Cuentas plan_Cuentas = new Plan_Cuentas();
+	public List<Plan_Cuentas> lPlan = new List<Plan_Cuentas>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		lPlan = await _context.Plan_Cuentas.ToListAsync();
+	}
+
+	private async Task Crear()
+	{
+		_Titulo = "Nueva Cuenta";
+		Mostrar = true;
+		plan_Cuentas = new Plan_Cuentas();		
+	}
+
+	private async Task Editar(Plan_Cuentas entity)
+	{
+		plan_Cuentas = entity;
+		_Titulo = $"Editar - Cuenta {plan_Cuentas.Nombre}";
+		Mostrar = true;
+	}
+
+	private async Task Save()
+	{
+		if (plan_Cuentas.Id > 0)
+		{
+			_context.Plan_Cuentas.Update(plan_Cuentas);
+			_context.SaveChanges();
+		}
+		else
+		{
+			_context.Plan_Cuentas.Add(plan_Cuentas);
+			_context.SaveChanges();
+		}
+
+		CerrarModal();
+
+		plan_Cuentas = new Plan_Cuentas();
+		lPlan = await _context.Plan_Cuentas.ToListAsync();
+	}	
+
+	private void CerrarModal()
+	{
+		Mostrar = false;
+	}
+}
