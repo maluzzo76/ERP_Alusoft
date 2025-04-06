@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Projects\\ERP_Alusoft\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\source\\projects\\erp_alusoft\\erp_alusoft\\components\\pages\\plandecuenterazor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\components\\pages\\plandecuenterazor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlanDeCuenterazor.razor",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Projects\\ERP_Alusoft\\ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
+              "RelativeDocumentMoniker": "ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Projects\\ERP_Alusoft\\ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
+              "RelativeToolTip": "ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T14:56:50.241Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

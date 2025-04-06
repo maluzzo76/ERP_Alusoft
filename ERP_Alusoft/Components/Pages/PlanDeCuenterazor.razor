@@ -5,59 +5,80 @@
 
 <h1>
 	Plan de cuentas <span>
-		<button class="btn btn-info" @onclick="Crear">
-			<i class="bi bi-plus-square"> Nuevo</i>
+		<button class="btn btn-info" @onclick="Crear" data-bs-toggle="modal" data-bs-target="#myModal">
+			<i class="bi bi-plus-square"> Agrgear Cuenta</i>
 		</button>
 	</span>
 </h1>
 <br />
 
-@if (Mostrar)
-{
+
+<div class="modal fade" id="myModal">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<h5>@_Titulo</h5>
-			<div class="row">
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Grupo</span>
-					<input type="text" class="form-control" @bind=plan_Cuentas.Codigo placeholder="Ingrese codigo de grupo ej: 01.01.02.03" />
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Nuemero</span>
-					<input type="text" class="form-control" @bind=plan_Cuentas.Numero placeholder="Ingrese numero de cuenta" />
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Nombre</span>
-					<input type="text" class="form-control" @bind=plan_Cuentas.Nombre placeholder="Ingrese nombre de cuenta" />
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<div class="form-check form-switch">
-						<label class="form-check-label" for="flexSwitchCheckChecked">Es Imputable</label>
-						<input type="checkbox" class="form-check-input" @bind=plan_Cuentas.IsImputable />						
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">@_Titulo</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body d-flex justify-content-center">
+				<div class="modal-dialog">
+					<div class="modal-content" style="border:none;">
+						<div class="row">
+							<div class="input-group mb-3 input-group-sm">
+								<span class="input-group-text" style="width:100px;">Grupo</span>
+								<input type="text" class="form-control" @bind=plan_Cuentas.Codigo placeholder="Ingrese codigo de grupo ej: 01.01.02.03" />
+							</div>
+							<div class="input-group mb-3 input-group-sm">
+								<span class="input-group-text" style="width:100px;">Nuemero</span>
+								<input type="text" class="form-control" @bind=plan_Cuentas.Numero placeholder="Ingrese numero de cuenta" />
+							</div>
+							<div class="input-group mb-3 input-group-sm">
+								<span class="input-group-text" style="width:100px;">Nombre</span>
+								<input type="text" class="form-control" @bind=plan_Cuentas.Nombre placeholder="Ingrese nombre de cuenta" />
+							</div>
+							<div class="input-group mb-3 input-group-sm">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="flexSwitchCheckChecked">Es Imputable</label>
+									<input type="checkbox" class="form-check-input" @bind=plan_Cuentas.IsImputable />
+								</div>
+							</div>
+							<div class="input-group mb-3 input-group-sm">
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="flexSwitchCheckChecked">Es de resultado</label>
+									<input type="checkbox" class="form-check-input" @bind=plan_Cuentas.IsResultado />
+								</div>
+							</div>							
+						</div>
 					</div>
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<div class="form-check form-switch">
-						<label class="form-check-label" for="flexSwitchCheckChecked">Es de resultado</label>
-						<input type="checkbox" class="form-check-input" @bind=plan_Cuentas.IsResultado />
-					</div>
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<button class="btn btn-success" @onclick="() => Save()">
-						<i class="bi bi-floppy"> Guardar</i>
-					</button>
-					<button class="btn btn-dark" @onclick="CerrarModal">
-						<i class="bi bi-x-square"> Cerrar</i>
-					</button>
 				</div>
 			</div>
-			<br />
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<div class="input-group mb-3 input-group-sm d-flex justify-content-end">
+					<button class="btn btn-success" @onclick="() => Save()" data-bs-dismiss="modal">
+						<i class="bi bi-floppy"> Guardar</i>
+					</button>
+					<button class="btn btn-dark" @onclick="CerrarModal" data-bs-dismiss="modal">
+						<i class="bi bi-x-square"> Cerrar</i>
+					</button>
+				</div>				
+			</div>
+
 		</div>
 	</div>
-}
+</div>
 
-<table class="table">
-	<thead>
+
+
+
+<div style="overflow-x:auto; height: 75vh;">
+	<table class="table">
+		<thead style=" position: sticky; top: 0; z-index: 1;">
 		<tr>
 			<th>Grupo</th>
 			<th>Cuenta</th>
@@ -87,12 +108,14 @@
 					</div>
 				</td>				
 				<td>
-					<i class="bi bi-pencil" @onclick="() => Editar(item)"></i>
+					<i class="bi bi-pencil" @onclick="() => Editar(item)" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+					<i class="bi bi-trash3" @onclick="() => Delete(item.Id)"></i>
 				</td>
 			</tr>
 		}
 	</tbody>
 </table>
+</div>
 
 @code {
 	private string _Titulo = "";
@@ -102,7 +125,12 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		lPlan = await _context.Plan_Cuentas.ToListAsync();
+		Load();
+	}
+
+	private void Load()
+	{ 
+		lPlan = _context.Plan_Cuentas.OrderBy(o=>o.Codigo).ToList();
 	}
 
 	private async Task Crear()
@@ -116,7 +144,7 @@
 	{
 		plan_Cuentas = entity;
 		_Titulo = $"Editar - Cuenta {plan_Cuentas.Nombre}";
-		Mostrar = true;
+		Mostrar = false;
 	}
 
 	private async Task Save()
@@ -135,8 +163,19 @@
 		CerrarModal();
 
 		plan_Cuentas = new Plan_Cuentas();
-		lPlan = await _context.Plan_Cuentas.ToListAsync();
+		Load();
 	}	
+
+	private async Task Delete(int id)
+	{
+		plan_Cuentas = _context.Plan_Cuentas.Find(id);
+		if (plan_Cuentas != null)
+		{
+			_context.Plan_Cuentas.Remove(plan_Cuentas);
+			_context.SaveChanges();
+			Load();
+		}
+	}
 
 	private void CerrarModal()
 	{
