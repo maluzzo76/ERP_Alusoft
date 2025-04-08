@@ -9,6 +9,6 @@
         public Nullable<bool> IsImputable { get ; set; }
         public Nullable<bool> IsResultado { get; set; }
 
-        
+        public List<LineaAsiento> Lineas_Asiento { get; set; } = new List<LineaAsiento>();
     }
 }

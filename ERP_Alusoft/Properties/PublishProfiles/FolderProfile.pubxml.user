@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\MarianoRobertoAluzzo\Documents\Source\Projects\ERP_Alusoft\ERP_Alusoft\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2025-04-06T15:33:46.0821894Z||;</History>
+    <_PublishTargetUrl>C:\Users\MarianoRobertoAluzzo\Documents\Source\Project\Alusoft\ERP_Alusoft\ERP_Alusoft\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2025-04-08T23:04:37.6076872Z||;True|2025-04-08T19:24:32.6058420-03:00||;True|2025-04-06T12:33:46.0821894-03:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

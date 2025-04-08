@@ -9,7 +9,6 @@ namespace ERP_Alusoft.Model
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> Fecha { get; set; }
-        
-        
+        public List<LineaAsiento> Lineas_Asiento { get; set; } = new List<LineaAsiento>();
     }
 }

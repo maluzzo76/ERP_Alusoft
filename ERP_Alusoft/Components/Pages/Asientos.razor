@@ -2,215 +2,242 @@
 @rendermode InteractiveServer
 
 <h1>
-	Asientos <span>
-		<button class="btn btn-info" @onclick="Crear">
-			<i class="bi bi-plus-square"> Nuevo</i>
-		</button>
-	</span>
+    Asientos <span>
+        <button class="btn btn-info" @onclick="Crear" data-bs-toggle="modal" data-bs-target="#myModal">
+            <i class="bi bi-plus-square"> Nuevo</i>
+        </button>
+    </span>
 </h1>
 
-@if (Mostrar)
-{
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<h5>@_Titulo</h5>
-			<div class="row">
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Fecha</span>
-					<input type="date" class="form-control" @bind=asiento.Fecha placeholder="Ingrese la fecha del asiento" />
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Concepto</span>
-					<input type="text" class="form-control" @bind=asiento.Concepto placeholder="Ingrese el concepto del asiento" />
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<button class="btn btn-success" @onclick="() => Save()">
-						<i class="bi bi-floppy"> Guardar</i>
-					</button>
-					<button class="btn btn-dark" @onclick="CerrarModal">
-						<i class="bi bi-x-square"> Cerrar</i>
-					</button>
-				</div>
-			</div>
-			<br />
-		</div>
-	</div>
-}
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog " style="max-width:70%">
+        <div class="modal-content">
 
-@if (MostrarLa)
-{
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<h5>@_Titulo</h5>
-			<div class="row">
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Cuenta</span>
-					<select @bind="lineaAsiento.Plan_CuentasId" class="form-select">
-						<option value="">Seleccione una cuenta</option>
-						@foreach (var cuentas in plan_Cuentas)
-						{
-							<option value="@cuentas.Id">@cuentas.Nombre</option>
-						}
-					</select>
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Concepto</span>
-					<input type="text" class="form-control" @bind=lineaAsiento.Concepto placeholder="Ingrese el concepto del asiento" />
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Debe</span>
-					<input type="number" class="form-control" @bind=lineaAsiento.Debe placeholder="Ingrese el concepto del asiento" />
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<span class="input-group-text">Haber</span>
-					<input type="number" class="form-control" @bind=lineaAsiento.Haber placeholder="Ingrese el concepto del asiento" />
-				</div>
-				<div class="input-group mb-3 input-group-sm">
-					<button class="btn btn-success" @onclick="() => SaveLa()">
-						<i class="bi bi-floppy"> Guardar</i>
-					</button>
-					<button class="btn btn-dark" @onclick="CerrarModal">
-						<i class="bi bi-x-square"> Cerrar</i>
-					</button>
-				</div>
-			</div>
-			<br />
-		</div>
-	</div>
-}
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">@_Titulo  </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body d-flex justify-content-center" >
+                <div class="modal-dialog" style="max-width:100%">
+                    <div class="modal-content" style="border:none;">
+                        <div class="modal-content" style="border:none;">                           
+                            <div class="row">
+                                <div class="input-group mb-6 input-group-sm">
+                                    <span class="input-group-text" style="width:100px;">Fecha</span>
+                                    <input type="date" class="form-control" @bind=asiento.Fecha placeholder="Ingrese la fecha del asiento" />
+                                </div>
+                                <div class="input-group mb-6 input-group-sm">
+                                    <span class="input-group-text" style="width:100px;">Concepto</span>
+                                    <input type="text" class="form-control" @bind=asiento.Concepto placeholder="Ingrese el concepto del asiento" />
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:5px;">
+                                <div>
+                                    <table class="table table-sm table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Cuenta</th>
+                                                <th>Concepto</th>
+                                                <th>Debe</th>
+                                                <th>Haber</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select @bind="lineaAsiento.Plan_CuentasId" class="form-select">
+                                                        <option value="">cuenta</option>
+                                                        @foreach (var cuentas in plan_Cuentas)
+                                                        {
+                                                            <option value="@cuentas.Id">@cuentas.Nombre</option>
+                                                        }
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" @bind=lineaAsiento.Concepto placeholder="Concepto" />
+                                                </td>
+                                                <td>
+                                                    <input type="number" class="form-control" @bind=lineaAsiento.Debe placeholder="Debe" />
+                                                </td>
+                                                <td>
+                                                    <input type="number" class="form-control" @bind=lineaAsiento.Haber placeholder="Haber" />
+                                                </td>
+                                                <td>
+                                                    <i class="bi bi-floppy" @onclick="() => SaveLa()"></i>
+
+                                                </td>
+                                            </tr>
+                                            @foreach (LineaAsiento la in asiento.Lineas_Asiento)
+                                            {
+                                                <tr>
+                                                    <td>@la.Plan_Cuentas.Nombre</td>
+                                                    <td>@la.Concepto </td>
+                                                    <td style="text-align:right">@la.Debe.Value.ToString("C") </td>
+                                                    <td style="text-align:right">@la.Haber.Value.ToString("C")</td>
+                                                    <td>
+                                                        <i class="bi bi-pencil" @onclick="() => EditarLa(la)"></i>
+                                                       
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <div class="input-group mb-3 input-group-sm d-flex justify-content-end">
+                    <button class="btn btn-success" @onclick="() => Save()" data-bs-dismiss="modal">
+                        <i class="bi bi-floppy"> Guardar</i>
+                    </button>
+                    <button class="btn btn-dark" @onclick="CerrarModal" data-bs-dismiss="modal">
+                        <i class="bi bi-x-square"> Cerrar</i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
 <table class="table">
-	<thead>
-		<tr>
-			<th>Fecha</th>
-			<th>Asiento</th>
-			<th>Concepto</th>
-			<th></th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in asientos)
-		{
-			<tr>
-				<td>@item.Fecha</td>
-				<td>@item.Id</td>
-				<td>@item.Concepto</td>
-				<td>
-					<i class="bi bi-pencil" @onclick="() => Editar(item)"></i>
-				</td>
-				<td>
-					<i class="bi bi-border-style" @onclick="() => CrearLa(item)"></i>
-				</td>
-			</tr>
-			foreach (LineaAsiento la in lineasAsientos.Where(w => w.Asiento_Id == item.Id))
-			{ 
-				<table>
-					<tbody>
-						<tr>
-							<td>@la.Plan_Cuentas.Nombre</td>
-							<td>@la.Concepto </td>
-							<td>@la.Debe </td>
-							<td>@la.Haber</td>
-						</tr>
-					</tbody>
-				</table>
-			}
-		}
-	</tbody>
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Asiento</th>
+            <th>Concepto</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in asientos)
+        {
+            <tr>
+                <td>@item.Fecha</td>
+                <td>@item.Id</td>
+                <td>@item.Concepto</td>
+                <td>
+                    <i class="bi bi-pencil" @onclick="() => Editar(item)" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                </td>
+                <td>
+                    <i class="bi bi-border-style" @onclick="() => CrearLa(item)"></i>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
 
 @code {
 
-	private string _Titulo = "";
-	private bool Mostrar = false;
-	private bool MostrarLa = false;
-	Asiento asiento = new Asiento();
-	LineaAsiento lineaAsiento = new LineaAsiento();
-	List<Asiento> asientos = new List<Asiento>();
-	List<Plan_Cuentas> plan_Cuentas = new List<Plan_Cuentas>();
-	List<LineaAsiento> lineasAsientos = new List<LineaAsiento>();
+    private string _Titulo = "";
+    private bool Mostrar = false;
+    private bool MostrarLa = false;
+    Asiento asiento = new Asiento();
+    LineaAsiento lineaAsiento = new LineaAsiento();
+    List<Asiento> asientos = new List<Asiento>();
+    List<Plan_Cuentas> plan_Cuentas = new List<Plan_Cuentas>();
+    List<LineaAsiento> lineasAsientos = new List<LineaAsiento>();
 
-	protected override async Task OnInitializedAsync()
-	{
-		asientos = await _context.Asientos.ToListAsync();
-		plan_Cuentas = await _context.Plan_Cuentas.Where(w=> w.IsImputable.Value).OrderBy(o=>o.Nombre).ToListAsync();
-		lineasAsientos = await _context.Lineas_Asiento.Include(c=> c.Plan_Cuentas).ToListAsync();
-	}
+    protected override async Task OnInitializedAsync()
+    {
+        asientos = await _context.Asientos.Include(l => l.Lineas_Asiento).ToListAsync();
+        plan_Cuentas = await _context.Plan_Cuentas.Where(w => w.IsImputable.Value).OrderBy(o => o.Nombre).ToListAsync();
+        lineasAsientos = await _context.Lineas_Asiento.Include(c => c.Plan_Cuentas).ToListAsync();
+    }
 
-	private async Task Crear()
-	{
-		_Titulo = "Nuevo Asiento";
-		asiento = new Asiento();
-		Mostrar = true;
-	}
+    private async Task Crear()
+    {
+        _Titulo = "Nuevo Asiento";
+        asiento = new Asiento();
+        asiento.Fecha = DateTime.Now;
+        Mostrar = false;
+    }
 
-	private async Task CrearLa(Asiento AsientoEntity)
-	{
-		_Titulo = "Lineas Asiento";
-		asiento = AsientoEntity;
-		lineaAsiento = new LineaAsiento();
-		lineaAsiento.Asiento_Id = asiento.Id; 
-		MostrarLa = true;
-	}
+    private async Task CrearLa(Asiento AsientoEntity)
+    {
+        _Titulo = "Lineas Asiento";
+        asiento = AsientoEntity;
+        lineaAsiento = new LineaAsiento();
+        lineaAsiento.Asiento_Id = asiento.Id;
+        MostrarLa = false;
+    }
 
-	private async Task Editar(Asiento entity)
-	{
-		asiento = entity;
-		_Titulo = $"Editar - Asiento {asiento.Id}";
-		Mostrar = true;
-	}
+    private async Task Editar(Asiento entity)
+    {
+        asiento = entity;
+        _Titulo = $"Editar - Asiento {asiento.Id}";
+        Mostrar = false;
+    }
 
-	private async Task Save()
-	{
-		if (asiento.Id > 0)
-		{
-			_context.Asientos.Update(asiento);
-			_context.SaveChanges();
-		}
-		else
-		{
-			_context.Asientos.Add(asiento);
-			_context.SaveChanges();
-		}
+    private async Task Save()
+    {
+        if (asiento.Id > 0)
+        {
+            _context.Asientos.Update(asiento);
+            _context.SaveChanges();
+        }
+        else
+        {
+            _context.Asientos.Add(asiento);
+            _context.SaveChanges();
+        }
 
-		CerrarModal();
+        CerrarModal();
 
-		asiento = new Asiento();
-		asientos = await _context.Asientos.ToListAsync();
-	}
+        //asiento = new Asiento();
+        //asientos = await _context.Asientos.ToListAsync();
+    }
 
-	private async Task SaveLa()
-	{
-		try
-		{
-			if (lineaAsiento.Id > 0)
-			{
-				_context.Lineas_Asiento.Update(lineaAsiento);
-				_context.SaveChanges();
-			}
-			else
-			{
-				_context.Lineas_Asiento.Add(lineaAsiento);
-				_context.SaveChanges();
-			}
+    private async Task EditarLa(LineaAsiento la)
+    {
+        lineaAsiento = la;
+    }
 
-			CerrarModal();
+    private async Task SaveLa()
+    {
+        await Save();
+        try
+        {
+            if (lineaAsiento.Id > 0)
+            {
+                _context.Lineas_Asiento.Update(lineaAsiento);
+                _context.SaveChanges();
+            }
+            else
+            {
+                int id = asiento.Id;
+                lineaAsiento.Asiento_Id = asiento.Id;
+                _context.Lineas_Asiento.Add(lineaAsiento);
+                _context.SaveChanges();
+                asiento = _context.Asientos.Find(id);
+            }
 
-			lineaAsiento = new LineaAsiento();
-			asientos = await _context.Asientos.ToListAsync();
-			lineasAsientos = await _context.Lineas_Asiento.ToListAsync();
-		}
-		catch (Exception ex)
-		{ 
-			string _e = ex.Message;
-		}
-	}
+            CerrarModal();
 
-	private void CerrarModal()
-	{
-		Mostrar = false;
-		MostrarLa = false;
-	}
+            lineaAsiento = new LineaAsiento();
+            asientos = await _context.Asientos.ToListAsync();
+            lineasAsientos = await _context.Lineas_Asiento.ToListAsync();
+        }
+        catch (Exception ex)
+        {
+            string _e = ex.Message;
+        }
+    }
+
+    private void CerrarModal()
+    {
+        Mostrar = false;
+        MostrarLa = false;
+    }
 }

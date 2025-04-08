@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Projects\\ERP_Alusoft\\",
+  "WorkspaceRootPath": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\source\\projects\\erp_alusoft\\erp_alusoft\\components\\pages\\plandecuenterazor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\source\\project\\alusoft\\erp_alusoft\\erp_alusoft\\components\\pages\\plandecuenterazor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\components\\pages\\plandecuenterazor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\source\\project\\alusoft\\erp_alusoft\\erp_alusoft\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\source\\project\\alusoft\\erp_alusoft\\erp_alusoft\\model\\plan_cuentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\model\\plan_cuentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\source\\project\\alusoft\\erp_alusoft\\erp_alusoft\\model\\lineaasiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\model\\lineaasiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\source\\project\\alusoft\\erp_alusoft\\erp_alusoft\\model\\asiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\model\\asiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,11 +38,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -57,16 +69,76 @@
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ERP_Alusoft\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ERP_Alusoft\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:51:46.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LineaAsiento.cs",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Model\\LineaAsiento.cs",
+              "RelativeDocumentMoniker": "ERP_Alusoft\\Model\\LineaAsiento.cs",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Model\\LineaAsiento.cs",
+              "RelativeToolTip": "ERP_Alusoft\\Model\\LineaAsiento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:49:49.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Asiento.cs",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Model\\Asiento.cs",
+              "RelativeDocumentMoniker": "ERP_Alusoft\\Model\\Asiento.cs",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Model\\Asiento.cs",
+              "RelativeToolTip": "ERP_Alusoft\\Model\\Asiento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:49:21.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Plan_Cuentas.cs",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Model\\Plan_Cuentas.cs",
+              "RelativeDocumentMoniker": "ERP_Alusoft\\Model\\Plan_Cuentas.cs",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Model\\Plan_Cuentas.cs",
+              "RelativeToolTip": "ERP_Alusoft\\Model\\Plan_Cuentas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:49:14.334Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "PlanDeCuenterazor.razor",
-              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Projects\\ERP_Alusoft\\ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
               "RelativeDocumentMoniker": "ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
-              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Projects\\ERP_Alusoft\\ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
               "RelativeToolTip": "ERP_Alusoft\\Components\\Pages\\PlanDeCuenterazor.razor",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAG8AAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T14:56:50.241Z",
+              "WhenOpened": "2025-04-08T22:48:37.867Z",
               "EditorCaption": ""
             }
           ]

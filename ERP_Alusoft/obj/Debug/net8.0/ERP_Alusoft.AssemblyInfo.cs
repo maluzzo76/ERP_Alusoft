@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ERP_Alusoft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8685c18139931be434ac8dbd56e8e76b10634d13")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c482eff869249d5d3c819a80a00a96d3f0f82b2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ERP_Alusoft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ERP_Alusoft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

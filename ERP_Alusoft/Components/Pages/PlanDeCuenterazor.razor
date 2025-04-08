@@ -79,42 +79,46 @@
 <div style="overflow-x:auto; height: 75vh;">
 	<table class="table">
 		<thead style=" position: sticky; top: 0; z-index: 1;">
-		<tr>
-			<th>Grupo</th>
-			<th>Cuenta</th>
-			<th>Es Resultado</th>
-			<th>Es Imputable</th>			
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in lPlan)
-		{
-			string _bold = "";
-			if (item.IsResultado ?? false)
-			{ _bold = "fw-bold"; }
-
-			<tr class="@_bold">
-				<td><span style="color:white">@item.Codigo</span>@item.Codigo </td>
-				<td><i><span style="color:white">@item.Codigo</span> @item.Numero - @item.Nombre</i> </td>
-				<td>
-					<div class="form-check form-switch">
-						<input type="checkbox" disabled class="form-check-input" checked="@item.IsResultado" />
-					</div>
-				</td>
-				<td>
-					<div class="form-check form-switch">
-						<input type="checkbox" disabled class="form-check-input" checked="@item.IsImputable" />
-					</div>
-				</td>				
-				<td>
-					<i class="bi bi-pencil" @onclick="() => Editar(item)" data-bs-toggle="modal" data-bs-target="#myModal"></i>
-					<i class="bi bi-trash3" @onclick="() => Delete(item.Id)"></i>
-				</td>
+			<tr>
+				<th>Grupo</th>
+				<th>Cuenta</th>
+				<th>Es Resultado</th>
+				<th>Es Imputable</th>
+				<th style="text-align:right;width:200px;">Saldo</th>
+				<th style="text-align:right;width:100px;"></th>
 			</tr>
-		}
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			@foreach (var item in lPlan)
+			{
+				string _bold = "";
+				if (item.IsResultado ?? false)
+				{ _bold = "fw-bold"; }
+
+				<tr class="@_bold">
+					<td><span style="color:white">@item.Codigo</span>@item.Codigo </td>
+					<td><i><span style="color:white">@item.Codigo</span> @item.Numero - @item.Nombre</i> </td>
+					<td>
+						<div class="form-check form-switch">
+							<input type="checkbox" disabled class="form-check-input" checked="@item.IsResultado" />
+						</div>
+					</td>
+					<td>
+						<div class="form-check form-switch">
+							<input type="checkbox" disabled class="form-check-input" checked="@item.IsImputable" />
+						</div>
+					</td>	
+					<td style="text-align:right;width:200px;">
+						<i> @lLineaAsientos.Where(l=>l.Plan_Cuentas.Codigo.StartsWith(item.Codigo)).Sum(la=> la.Debe - la.Haber).Value.ToString("C")</i>
+					</td>
+					<td style="text-align:right;width:100px;">
+						<i class="bi bi-pencil" @onclick="() => Editar(item)" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+						<i class="bi bi-trash3" @onclick="() => Delete(item.Id)"></i>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
 </div>
 
 @code {
@@ -122,15 +126,17 @@
 	private bool Mostrar = false;
 	Plan_Cuentas plan_Cuentas = new Plan_Cuentas();
 	public List<Plan_Cuentas> lPlan = new List<Plan_Cuentas>();
+	public List<LineaAsiento> lLineaAsientos = new List<LineaAsiento>();
 
 	protected override async Task OnInitializedAsync()
 	{
+		lLineaAsientos = await _context.Lineas_Asiento.ToListAsync();
 		Load();
 	}
 
 	private void Load()
 	{ 
-		lPlan = _context.Plan_Cuentas.OrderBy(o=>o.Codigo).ToList();
+		lPlan = _context.Plan_Cuentas.Include(l=>l.Lineas_Asiento).OrderBy(o=>o.Codigo).ToList();
 	}
 
 	private async Task Crear()
