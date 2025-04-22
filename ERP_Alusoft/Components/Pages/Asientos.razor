@@ -1,5 +1,5 @@
-﻿@page "/Asientos"
-@rendermode InteractiveServer
+﻿    @page "/Asientos"
+    @rendermode InteractiveServer
 
 <h1>
     Asientos <span>
@@ -20,10 +20,10 @@
             </div>
 
             <!-- Modal body -->
-            <div class="modal-body d-flex justify-content-center" >
+            <div class="modal-body d-flex justify-content-center">
                 <div class="modal-dialog" style="max-width:100%">
                     <div class="modal-content" style="border:none;">
-                        <div class="modal-content" style="border:none;">                           
+                        <div class="modal-content" style="border:none;">
                             <div class="row">
                                 <div class="input-group mb-6 input-group-sm">
                                     <span class="input-group-text" style="width:100px;">Fecha</span>
@@ -36,6 +36,47 @@
                             </div>
                             <div class="row" style="margin-top:5px;">
                                 <div>
+                                    <EditForm Model="@lineaAsiento" OnValidSubmit="SaveLa">
+                                        <DataAnnotationsValidator />
+                                        <ValidationSummary />
+                                        <table class="table table-sm table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Cuenta</th>
+                                                    <th>Concepto</th>
+                                                    <th>Debe</th>
+                                                    <th>Haber</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select @bind="lineaAsiento.Plan_CuentasId" class="form-select">
+                                                            <option value="">cuenta</option>
+                                                            @foreach (var cuentas in plan_Cuentas)
+                                                            {
+                                                                <option value="@cuentas.Id">@cuentas.Nombre</option>
+                                                            }
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" @bind="lineaAsiento.Concepto" placeholder="Concepto" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" class="form-control" @bind="lineaAsiento.Debe" placeholder="Debe" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" class="form-control" @bind="lineaAsiento.Haber" placeholder="Haber" />
+                                                    </td>
+                                                    <td>
+                                                        <i class="bi bi-floppy" @onclick="() => SaveLa()"></i>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </EditForm>
+
                                     <table class="table table-sm table-striped">
                                         <thead>
                                             <tr>
@@ -47,45 +88,31 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    <select @bind="lineaAsiento.Plan_CuentasId" class="form-select">
-                                                        <option value="">cuenta</option>
-                                                        @foreach (var cuentas in plan_Cuentas)
-                                                        {
-                                                            <option value="@cuentas.Id">@cuentas.Nombre</option>
-                                                        }
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control" @bind=lineaAsiento.Concepto placeholder="Concepto" />
-                                                </td>
-                                                <td>
-                                                    <input type="number" class="form-control" @bind=lineaAsiento.Debe placeholder="Debe" />
-                                                </td>
-                                                <td>
-                                                    <input type="number" class="form-control" @bind=lineaAsiento.Haber placeholder="Haber" />
-                                                </td>
-                                                <td>
-                                                    <i class="bi bi-floppy" @onclick="() => SaveLa()"></i>
-
-                                                </td>
-                                            </tr>
                                             @foreach (LineaAsiento la in asiento.Lineas_Asiento)
                                             {
                                                 <tr>
-                                                    <td>@la.Plan_Cuentas.Nombre</td>
+                                                    <td>@(la.Plan_Cuentas != null ? la.Plan_Cuentas.Nombre : "—")</td>
                                                     <td>@la.Concepto </td>
-                                                    <td style="text-align:right">@la.Debe.Value.ToString("C") </td>
-                                                    <td style="text-align:right">@la.Haber.Value.ToString("C")</td>
+                                                    <td style="text-align:right">@((la.Debe.HasValue) ? la.Debe.Value.ToString("C") : "") </td>
+                                                    <td style="text-align:right">@((la.Haber.HasValue) ? la.Haber.Value.ToString("C") : "")</td>
                                                     <td>
                                                         <i class="bi bi-pencil" @onclick="() => EditarLa(la)"></i>
-                                                       
+
                                                     </td>
                                                 </tr>
                                             }
                                         </tbody>
                                     </table>
+                                    @{
+                                        decimal debeTotal = asiento.Lineas_Asiento.Sum(s => s.Debe).GetValueOrDefault();
+                                        decimal haberTotal = asiento.Lineas_Asiento.Sum(s => s.Haber).GetValueOrDefault();
+                                        decimal diff = debeTotal - haberTotal;
+                                    }
+
+                                    <i>
+                                        <h5>Saldo: @diff.ToString("C")</h5>
+                                    </i>
+
                                 </div>
                             </div>
                         </div>
@@ -109,34 +136,50 @@
     </div>
 </div>
 
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Fecha</th>
-            <th>Asiento</th>
-            <th>Concepto</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in asientos)
-        {
+<div style="overflow-x:auto; height: 75vh;">
+    <table class="table table-striped">
+        <thead style=" position: sticky; top: 0; z-index: 1;">
             <tr>
-                <td>@item.Fecha</td>
-                <td>@item.Id</td>
-                <td>@item.Concepto</td>
-                <td>
-                    <i class="bi bi-pencil" @onclick="() => Editar(item)" data-bs-toggle="modal" data-bs-target="#myModal"></i>
-                </td>
-                <td>
-                    <i class="bi bi-border-style" @onclick="() => CrearLa(item)"></i>
-                </td>
+                <th>Fecha</th>
+                <th>Asiento</th>
+                <th>Concepto</th>
+                <th>Validado</th>
+                <th></th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in asientos.OrderByDescending(o => o.Id).ToList())
+            {
+                <tr>
+                    <td>@item.Fecha</td>
+                    <td>@item.Id</td>
+                    <td>@item.Concepto</td>
+                    <td>
+                        @{
+                            decimal Diff = (decimal)item.Lineas_Asiento.Sum(s => s.Debe).Value - (decimal)item.Lineas_Asiento.Sum(s => s.Haber).Value;
+                            if (Diff == 0)
+                            {
+                                <i class="bi bi-hand-thumbs-up"></i>
+                            }
+                            else
+                            {
+                                <i class="bi bi-hand-thumbs-down text-danger"></i>
+                            }
+
+                        }
+                    </td>
+                    <td>
+                        <i class="bi bi-pencil" @onclick="() => Editar(item)" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                    </td>
+                    <td>
+                        <i class="bi bi-border-style" @onclick="() => CrearLa(item)"></i>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 @code {
 
