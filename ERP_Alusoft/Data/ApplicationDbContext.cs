@@ -1,5 +1,6 @@
 ﻿using ERP_Alusoft.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace ERP_Alusoft.Data
 {
@@ -23,10 +24,13 @@ namespace ERP_Alusoft.Data
                 .WithMany(p => p.Lineas_Asiento)
                 .HasForeignKey(l => l.Plan_CuentasId)
                 .OnDelete(DeleteBehavior.Restrict); // Evita borrar cuenta si tiene líneas
+
+            modelBuilder.Entity<GastosFijos>().ToTable("GastosFijos", schema: "dbo");
         }
 
         public DbSet<Plan_Cuentas> Plan_Cuentas { get; set; }
         public DbSet<Asiento> Asientos { get; set; }
         public DbSet<LineaAsiento> Lineas_Asiento { get; set; }
+        public DbSet<GastosFijos> GastosFijos { get; set; }
     }
 }

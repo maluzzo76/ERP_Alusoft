@@ -1,0 +1,96 @@
+﻿@page "/PlanDeCuentaDetalle/{Id:int}"
+@rendermode InteractiveServer
+
+<PageTitle>Detalle Plan de Cuenta</PageTitle>
+
+<h1>
+    Plan de cuentas
+    <span>
+        <button class="btn btn-info" @onclick="NavegarDetalle">
+            <i class="bi bi-plus-square"> Agregar Cuenta</i>
+        </button>
+    </span>
+</h1>
+<br />
+
+<!-- Tabla de Cuentas -->
+@if (lPlan.Any())
+{
+    <div style="overflow-x:auto; height: 75vh;">
+        <table class="table">
+            <thead style="position: sticky; top: 0; z-index: 1;">
+                <tr>
+                    <th>Grupo</th>
+                    <th>Cuenta</th>                    
+                    <th style="text-align:right;width:200px;">Debe</th>
+                    <th style="text-align:right;width:200px;">Haber</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in lPlan)
+                {
+                    foreach (var line in item.Lineas_Asiento.OrderByDescending(o=>o)
+                    {
+                        string _bold = item.IsResultado == true ? "fw-bold" : "";
+
+                        <tr class="@_bold">
+                            <td>@item.Codigo</td>
+                        <td><i>@item.Numero - @item.Nombre</i></td>                       
+                        <td style="text-align:right;width:200px;">
+                            <i>
+                                @line.Debe
+                            </i>
+                        </td>
+                            <td style="text-align:right;width:200px;">
+                                <i>
+                                    @line.Haber
+                                </i>
+                            </td>
+                    </tr>
+                   }
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning mt-4" role="alert">
+        No hay registros disponibles para el Plan de Cuenta seleccionado.
+    </div>
+}
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private string _Titulo = "";
+    private bool Mostrar = false;
+    public List<Plan_Cuentas> lPlan = new List<Plan_Cuentas>();
+    public List<LineaAsiento> lLineaAsientos = new List<LineaAsiento>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        lLineaAsientos = await _context.Lineas_Asiento.ToListAsync();
+        Load(Id);
+    }
+
+    private void Load(int id)
+    {
+        lPlan = _context.Plan_Cuentas
+                        .Where(p => p.Id == id)
+                        .Include(p => p.Lineas_Asiento)
+                        .OrderBy(o => o.Codigo)
+                        .ToList();
+    }
+
+    [Inject]
+    private NavigationManager Navigation { get; set; }
+
+    private void NavegarDetalle()
+    {
+        Navigation.NavigateTo($"/PlanDeCuenta");
+    }
+    
+}

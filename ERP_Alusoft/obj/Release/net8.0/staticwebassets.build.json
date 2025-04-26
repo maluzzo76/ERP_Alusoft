@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kcxv4oXd2NmRjwDCqQ7DU4XYorPJKP1nyGay+gP3gcw=",
+  "Hash": "HOBY6DNY0UYx+CjDJ0oZSWt3YiVFTrR1NV0rzQfumwg=",
   "Source": "ERP_Alusoft",
   "BasePath": "_content/ERP_Alusoft",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ERP_Alusoft\\wwwroot",
       "Source": "ERP_Alusoft",
-      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
       "BasePath": "_content/ERP_Alusoft",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\ERP_Alusoft.styles.css",
+      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\ERP_Alusoft.styles.css",
       "SourceId": "ERP_Alusoft",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ERP_Alusoft",
       "RelativePath": "ERP_Alusoft#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "byBqTslhnlrzlM6jIQPmJI++h2dSJVW89Jv3K3v5HFE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\ERP_Alusoft.styles.css"
+      "OriginalItemSpec": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\ERP_Alusoft.styles.css"
     },
     {
-      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
+      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
       "SourceId": "ERP_Alusoft",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ERP_Alusoft",
       "RelativePath": "ERP_Alusoft#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "byBqTslhnlrzlM6jIQPmJI++h2dSJVW89Jv3K3v5HFE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
       "SourceId": "ERP_Alusoft",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
       "BasePath": "_content/ERP_Alusoft",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "ERP_Alusoft",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
       "BasePath": "_content/ERP_Alusoft",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "ERP_Alusoft",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
       "BasePath": "_content/ERP_Alusoft",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
       "SourceId": "ERP_Alusoft",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\",
       "BasePath": "_content/ERP_Alusoft",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -146,7 +146,7 @@
   "Endpoints": [
     {
       "Route": "app.css",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -167,7 +167,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -183,7 +183,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -204,7 +204,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -228,7 +228,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -249,7 +249,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -273,7 +273,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -294,7 +294,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -310,7 +310,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -331,7 +331,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -355,7 +355,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -376,7 +376,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -392,7 +392,7 @@
     },
     {
       "Route": "ERP_Alusoft.1g9z50u7p3.bundle.scp.css",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -413,7 +413,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -437,7 +437,7 @@
     },
     {
       "Route": "ERP_Alusoft.1g9z50u7p3.styles.css",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\ERP_Alusoft.styles.css",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\ERP_Alusoft.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -458,7 +458,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -482,7 +482,7 @@
     },
     {
       "Route": "ERP_Alusoft.bundle.scp.css",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -503,7 +503,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -519,7 +519,7 @@
     },
     {
       "Route": "ERP_Alusoft.styles.css",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\ERP_Alusoft.styles.css",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\bundle\\ERP_Alusoft.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -540,7 +540,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -556,7 +556,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -577,7 +577,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -601,7 +601,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -622,7 +622,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 15:48:17 GMT"
+          "Value": "Fri, 18 Apr 2025 22:47:28 GMT"
         },
         {
           "Name": "Cache-Control",

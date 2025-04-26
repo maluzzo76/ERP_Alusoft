@@ -113,6 +113,7 @@
 					</td>
 					<td style="text-align:right;width:100px;">
 						<i class="bi bi-pencil" @onclick="() => Editar(item)" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+							<i class="bi bi-box-arrow-in-right" @onclick="() => NavegarDetalle(item.Id)" title="Ver Detalle" style="cursor:pointer; margin-left:10px;"></i>
 						<i class="bi bi-trash3" @onclick="() => Delete(item.Id)"></i>
 					</td>
 				</tr>
@@ -186,5 +187,13 @@
 	private void CerrarModal()
 	{
 		Mostrar = false;
+	}
+
+	[Inject]
+	private NavigationManager Navigation { get; set; }
+
+	private void NavegarDetalle(int id)
+	{
+		Navigation.NavigateTo($"/PlanDeCuentaDetalle/{id}");
 	}
 }

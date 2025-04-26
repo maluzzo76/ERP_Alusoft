@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
       "PackagePath": "staticwebassets\\ERP_Alusoft.1g9z50u7p3.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Source\\Project\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {

@@ -1,0 +1,150 @@
+﻿@page "/Gastosfijos"
+@rendermode InteractiveServer
+
+<PageTitle>Gastos Fijos</PageTitle>
+
+<div style="display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <h1 style="margin: 0;">Gastos Fijos</h1>
+
+        <button class="btn btn-info"tabindex="" @onclick="NewEntity" data-bs-toggle="modal" data-bs-target="#myModal">
+            <i class="bi bi-plus-square"></i> Agregar Gasto
+        </button>
+    </div>
+
+    <div style="display: flex; align-items: center; background-color: #f0f2f5; padding: 8px 12px; border-radius: 8px; font-weight: bold;">
+        <i class="bi bi-cash-coin" style="margin-right: 8px; font-size: 1.5rem; color: green;"></i>
+        Total Gastos @lGastosFijos.Sum(s=> s.Monto).ToString("C")
+    </div>
+</div>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">@_Titulo</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Tipo de Gasto -->
+                    <div class="input-group mb-3 input-group-sm">
+                        <span class="input-group-text" style="width:120px;">Tipo Gasto</span>
+                        <input type="text" class="form-control" @bind="GastoFijoEnt.TipoGasto" placeholder="Ingrese tipo de gasto" />
+                    </div>
+
+                    <!-- Monto -->
+                    <div class="input-group mb-3 input-group-sm">
+                        <span class="input-group-text" style="width:120px;">
+                            <i></i> Monto $
+                        </span>
+                        <input type="number" step="0.01" class="form-control " @bind="GastoFijoEnt.Monto" placeholder="Ingrese monto" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button class="btn btn-success" @onclick="Save" data-bs-dismiss="modal">
+                    <i class="bi bi-floppy"></i> Guardar
+                </button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-square"></i> Cerrar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div style="overflow-x:auto; height: 75vh;">
+    <table class="table">
+        <thead style=" position: sticky; top: 0; z-index: 1;">
+            <tr>
+                <th>Tipo Gasto</th>
+                <th style="text-align:right;">Monto</th>
+                <th style="text-align:right;width:100px;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in lGastosFijos)
+            {
+                <tr >
+                    <td><i>@item.TipoGasto</i></td>
+                    <td style="text-align:right;"><i>@item.Monto.ToString("C")</i> </td>
+
+                    <td style="text-align:right;width:100px;">
+                        <i class="bi bi-pencil" @onclick="() => setEntity(item.Id)" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                        <i class="bi bi-trash3" @onclick="() => Delete(item.Id)"></i>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@code {
+    private string _Titulo = "";
+    private GastosFijos GastoFijoEnt = new GastosFijos();
+    private List<GastosFijos> lGastosFijos = new List<GastosFijos>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        lGastosFijos = await _context.GastosFijos.ToListAsync();
+        Load();
+    }
+
+    private void Load()
+    {
+        lGastosFijos = _context.GastosFijos.OrderBy(o => o.TipoGasto).ToList();
+        NewEntity();
+    }
+
+    private void NewEntity()
+    {
+        _Titulo = "Agregar Gasto";
+        GastoFijoEnt = new GastosFijos();        
+    }
+
+    private void setEntity(int id)
+    {        
+        GastoFijoEnt = _context.GastosFijos.Find(id);
+        _Titulo = $"Editar Gasto - {GastoFijoEnt.TipoGasto}";
+    }
+
+
+    private void Save()
+    {
+        if (GastoFijoEnt.Id > 0)
+        {
+            _context.GastosFijos.Update(GastoFijoEnt);
+            _context.SaveChanges();
+            Load();
+        }
+        else
+        {
+            _context.GastosFijos.Add(GastoFijoEnt);
+            _context.SaveChanges();
+            Load();
+        }
+    }
+
+    private void Delete(int id)
+    {
+        setEntity(id);
+        if(GastoFijoEnt.Id>0)
+        {
+            _context.GastosFijos.Remove(GastoFijoEnt);
+            _context.SaveChanges();
+            Load();
+        }
+    }
+
+}

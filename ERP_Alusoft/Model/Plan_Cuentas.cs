@@ -1,4 +1,4 @@
-﻿namespace ERP_Alusoft.Model
+﻿    namespace ERP_Alusoft.Model
 {
     public class Plan_Cuentas
     {
