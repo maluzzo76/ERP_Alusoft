@@ -4,10 +4,10 @@
 <PageTitle>Detalle Plan de Cuenta</PageTitle>
 
 <h1>
-    Plan de cuentas
+    Detalle Cuenta 
     <span>
         <button class="btn btn-info" @onclick="NavegarDetalle">
-            <i class="bi bi-plus-square"> Agregar Cuenta</i>
+            <i class="bi bi-plus-square"> Volver</i>
         </button>
     </span>
 </h1>
@@ -20,8 +20,10 @@
         <table class="table">
             <thead style="position: sticky; top: 0; z-index: 1;">
                 <tr>
-                    <th>Grupo</th>
-                    <th>Cuenta</th>                    
+                    <th style="width:150px;">Fecha</th>
+                    <th>Asiento</th>
+                    <th>Cuenta</th>        
+                    <th>Concepto</th>
                     <th style="text-align:right;width:200px;">Debe</th>
                     <th style="text-align:right;width:200px;">Haber</th>
                 </tr>
@@ -29,13 +31,14 @@
             <tbody>
                 @foreach (var item in lPlan)
                 {
-                    foreach (var line in item.Lineas_Asiento.OrderByDescending(o=>o)
+                    foreach (var line in item.Lineas_Asiento.OrderByDescending(o=>o.Fecha))
                     {
-                        string _bold = item.IsResultado == true ? "fw-bold" : "";
-
-                        <tr class="@_bold">
-                            <td>@item.Codigo</td>
-                        <td><i>@item.Numero - @item.Nombre</i></td>                       
+                        
+                        <tr>
+                            <td>@line.Fecha.Value.ToString("dd-MM-yyyy")</td>
+                            <td>@line.Asiento_Id</td>
+                        <td><i>@item.Numero - @item.Nombre</i></td>     
+                        <td>@line.Concepto</td>
                         <td style="text-align:right;width:200px;">
                             <i>
                                 @line.Debe
