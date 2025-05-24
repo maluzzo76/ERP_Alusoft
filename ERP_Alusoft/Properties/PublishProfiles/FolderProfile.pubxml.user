@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\MarianoRobertoAluzzo\Documents\Projects\Alusoft\ERP_Alusoft\ERP_Alusoft\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2025-05-13T14:45:54.9354887Z||;True|2025-04-26T13:10:36.5387930-03:00||;True|2025-04-26T13:10:01.0609929-03:00||;True|2025-04-26T12:59:40.0702316-03:00||;True|2025-04-21T21:34:09.6560146-03:00||;True|2025-04-08T20:04:37.6076872-03:00||;True|2025-04-08T19:24:32.6058420-03:00||;True|2025-04-06T12:33:46.0821894-03:00||;</History>
+    <History>True|2025-05-24T04:40:41.3094358Z||;True|2025-05-13T11:45:54.9354887-03:00||;True|2025-04-26T13:10:36.5387930-03:00||;True|2025-04-26T13:10:01.0609929-03:00||;True|2025-04-26T12:59:40.0702316-03:00||;True|2025-04-21T21:34:09.6560146-03:00||;True|2025-04-08T20:04:37.6076872-03:00||;True|2025-04-08T19:24:32.6058420-03:00||;True|2025-04-06T12:33:46.0821894-03:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

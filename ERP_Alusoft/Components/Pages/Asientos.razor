@@ -254,6 +254,7 @@
         {
             if (lineaAsiento.Id > 0)
             {
+                lineaAsiento.Fecha = asiento.Fecha.Value;
                 _context.Lineas_Asiento.Update(lineaAsiento);
                 _context.SaveChanges();
             }
@@ -261,6 +262,7 @@
             {
                 int id = asiento.Id;
                 lineaAsiento.Asiento_Id = asiento.Id;
+                lineaAsiento.Fecha = asiento.Fecha.Value;
                 _context.Lineas_Asiento.Add(lineaAsiento);
                 _context.SaveChanges();
                 asiento = _context.Asientos.Find(id);
