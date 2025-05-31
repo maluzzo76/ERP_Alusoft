@@ -1,12 +1,19 @@
+using System.Globalization;
 using ERP_Alusoft.Components;
 using ERP_Alusoft.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var cultureInfo = new CultureInfo("es-AR");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {

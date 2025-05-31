@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\projects\\alusoft\\erp_alusoft\\erp_alusoft\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\projects\\alusoft\\erp_alusoft\\erp_alusoft\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|c:\\users\\marianorobertoaluzzo\\documents\\projects\\alusoft\\erp_alusoft\\erp_alusoft\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7DC8E1D8-2A28-472F-A7A2-A587F2E11914}|ERP_Alusoft\\ERP_Alusoft.csproj|solutionrelative:erp_alusoft\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,6 +67,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Program.cs",
+              "RelativeDocumentMoniker": "ERP_Alusoft\\Program.cs",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Program.cs",
+              "RelativeToolTip": "ERP_Alusoft\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T00:01:03.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "ERP_Alusoft\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "ERP_Alusoft\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T22:34:54.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "ERP_Alusoft\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "ERP_Alusoft\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T22:34:52.52Z",
+              "EditorCaption": ""
             }
           ]
         }

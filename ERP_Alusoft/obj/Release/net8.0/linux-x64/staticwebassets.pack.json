@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\obj\\Release\\net8.0\\linux-x64\\scopedcss\\projectbundle\\ERP_Alusoft.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ERP_Alusoft.1g9z50u7p3.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\MarianoRobertoAluzzo\\Documents\\Projects\\Alusoft\\ERP_Alusoft\\ERP_Alusoft\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.ERP_Alusoft.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.ERP_Alusoft.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.build.ERP_Alusoft.props",
+      "PackagePath": "build\\ERP_Alusoft.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.buildMultiTargeting.ERP_Alusoft.props",
+      "PackagePath": "buildMultiTargeting\\ERP_Alusoft.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\linux-x64\\staticwebassets\\msbuild.buildTransitive.ERP_Alusoft.props",
+      "PackagePath": "buildTransitive\\ERP_Alusoft.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
